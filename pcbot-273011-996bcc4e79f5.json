@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pcbot-273011",
+  "private_key_id": "996bcc4e79f54af66f9d1a0c4c4b61d3dbe36e80",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLxEnWWOxfhnyb\n4Cu61yx9/b2x2ryNCl//rTdAiGkPGqT51FzTnRAjiEO8r8pmKf1w0NN9iiUYHlIs\nNYcY5SfRCApHPs+FVbPlTpvxsQAZFrqEGTBAFbFUPwYmV4SccCA5JfUhTY+6mPCp\n8qAdjrQXejazGTenSFuktfH77CM1iJejATydoCv7pgEP1NQF0id+jQh7qyZ4Ed1r\nIOYJZlDGCws7u3xzLDD2BWyvkphQE2h8U8tePklejkKTRKbIimK1Poa8NhhYfmyL\nsxLpVgUt2gQCFzZq7YMLDG7W4AVG+AuNmZv8PWFU2ZFhBGeMek0wsRUJV2vN1XDC\nTbFvFbr9AgMBAAECggEADxX1MX1b4qaeSxwJoMeVb659gNFk7Dw8Zz13vbtbq9aZ\nKDXkuXYDX94SxcFuBqpNLTEIt16m6GY2RzefTOSKUht6R1QLIR/7NZrgSMCF9VWN\ncYI75EK24jnYRrZsBvj2KcT5pQGNBo+UIcDowcdy5doSeqf/Ss88mbEuvSv6X1gf\nqa9es32zTrRUgJ0TvoiijsDZVp9LMK4ASvPNF3wVZrq0xhpzikf3QE3/nAHDZUbB\n1XfZXA5Ba8oZxMpwZwjcFpgwAWZSzEalB1t7TftS45HGzQ9UmQeCz8ENYSrxMR24\ne/zDXBntUd7NBJPfbEW6D/UweJ101POTfJZRYifMsQKBgQDtegBlrRneGuj8p+JE\nA5f0Y/JkAQHq518cyCsjZ4PfLs5pQ3dgmcFUVaBs1c+A9tuTfLzbd07Z5PTtxwXi\nMyOcr6A6vEamZCht0VP73hfRe4ix3RZQZ87ZzGa/FGZe9U3qbqTrmA5WLoXBNU1k\nZS1t5p1L4nrLUQ3TicckPDJzOwKBgQDbqSjrDJKbu5z62/Ck7EIpbZOsUNclMhYa\ntAzDF5Y1gUhEOOMmyPtZIUc/DxWkYOnKpSw1jXi/xqgFtrUaMOBiA7RR00gTDqQD\nefmlomzMIYEafVHaYrfjvlZ7759NdxPHjABUwFfpZJRzw9UxJ3Ne4kgaT0f5Ng62\nv7Yk6qW3JwKBgBtSUgFgrP00s2F+HzYcA7uGVDjVNNdFz1eMYAouuqlOxUivDmj6\nx5dgUpiy8LCxtgl97GyDiXrgMJ26rB6eK5a3TgPz7VzvYQdhcfwkTTE4uT1dZlfR\n2aaNMbUCL9T0/AXgvPCuCdg4egMEkubeDR/7zFUStXX22VRhIZw1oMhJAoGACTQr\nTL34HqJbz38LtD1aAFZhC6VPfnV8y52js0D3wEIsfv9LNULSlUd5rsC5DWwqH52Q\nHqZQ2ug9/g9Lw08s965kDdGmgXXplWO0/CW0HVGCEVQS6+2a+uXsxcCikiJdJ81L\n7kEo7dSTC862zhpzERS2JLQRtfV35FxgC2fxjZ0CgYEA2QJJe2ErnMogS78Gdy1S\nfb/3ouC2lwOgQe0SIAJxy7Pov1My2k6A5eeUcztFzLKWbwBc/y0bUXpCHLEn9Vqj\nFzMGJ+y4mjaHqXzMSzA5cNn9UdCReTAyYkKIh68Bfha1bm7VtCwEqMtMqR6n6gZ4\neyl8w4sVBvjATfW0/XSHC00=\n-----END PRIVATE KEY-----\n",
+  "client_email": "pcbot-jungsan@pcbot-273011.iam.gserviceaccount.com",
+  "client_id": "106792166623353402710",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pcbot-jungsan%40pcbot-273011.iam.gserviceaccount.com"
+}
