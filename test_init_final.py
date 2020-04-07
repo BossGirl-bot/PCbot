@@ -2108,22 +2108,10 @@ while True:
 							color=0xff00ff
 							)
 					await msg.channel.send(embed=embed, tts=False)
-
-	client.loop.create_task(task())
-	try:
-		client.loop.run_until_complete(client.start(access_token))
-	except SystemExit:
-		handle_exit()
-	except KeyboardInterrupt:
-		handle_exit()
-	#client.loop.close()
-	#print("Program ended")
-	#break
-
-	print("Bot restarting")
-	client = discord.Client(loop=client.loop)
-
-	@commands.command(name='!race', aliases=command[24])   #경주
+					
+			################ 경주 ################ 
+			
+			if message.content.startswith(command[24]):
 	async def modify_(self, ctx, *, msg: str):
 		race_info = []
 		fr = []
@@ -2247,3 +2235,17 @@ while True:
 				#print(result)
 					
 				await result_race.edit(content = output + ':tada: 경주 종료!\n' + result_str)
+
+	client.loop.create_task(task())
+	try:
+		client.loop.run_until_complete(client.start(access_token))
+	except SystemExit:
+		handle_exit()
+	except KeyboardInterrupt:
+		handle_exit()
+	#client.loop.close()
+	#print("Program ended")
+	#break
+
+	print("Bot restarting")
+	client = discord.Client(loop=client.loop)
