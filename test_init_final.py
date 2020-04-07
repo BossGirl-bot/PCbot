@@ -1381,6 +1381,7 @@ while True:
 				command_list += command[23] + '\n'     #!대기자
 				command_list += command[23] + ' [파티내용]\n'     #!대기자
 				command_list += command[23] + '삭제\n'     #!대기자
+				command_list += command[24] + '\n'     #!
 				embed = discord.Embed(
 						title = "----- 명령어 -----",
 						description= '```' + command_list + '```',
