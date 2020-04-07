@@ -2112,6 +2112,12 @@ while True:
 			################ 경주 ################ 
 			
 			if message.content.startswith(command[24]):
+def __init__(self, ctx):
+		self.bot = ctx.bot
+		self._guild = ctx.guild
+		self._channel = ctx.channel
+		self._cog = ctx.cog
+		
 	async def modify_(self, ctx, *, msg: str):
 		race_info = []
 		fr = []
