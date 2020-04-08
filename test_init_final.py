@@ -1727,7 +1727,7 @@ while True:
 						ouput_bossData.append(aa)
 						aa = []
 
-				for i in range(fixed_bossNum):
+				#for i in range(fixed_bossNum):
 					aa.append(fixed_bossData[i][0])                      #output_bossData[0] : 보스명
 					aa.append(fixed_bossTime[i])                         #output_bossData[1] : 시간
 					aa.append(fixed_bossTime[i].strftime('%H:%M:%S'))    #output_bossData[2] : 시간(00:00:00)
