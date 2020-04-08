@@ -1255,7 +1255,7 @@ while True:
 
 	################ 파티2 등록/확인 ################ 
 	@client.command(name=command[27][0], aliases=command[27][1:])
-	async def notice_(ctx):
+	async def notice2_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content.split(" ")
 			if len(msg) > 1:
@@ -1283,7 +1283,7 @@ while True:
 
 	################ 파티2 삭제 ################ 
 	@client.command(name=command[27][0], aliases=command[27][1:])
-	async def noticeDel_(ctx):
+	async def notice2Del_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			contents = repo.get_contents("notice2.ini")
 			repo.update_file(contents.path, "notice2 삭제", '', contents.sha)
@@ -1294,7 +1294,7 @@ while True:
 
 	################ 대기자 등록/확인 ################ 
 	@client.command(name=command[28][0], aliases=command[28][1:])
-	async def notice_(ctx):
+	async def notice3_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content.split(" ")
 			if len(msg) > 1:
@@ -1322,7 +1322,7 @@ while True:
 
 	################ 대기자 삭제 ################ 
 	@client.command(name=command[28][0], aliases=command[28][1:])
-	async def noticeDel_(ctx):
+	async def notice3Del_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			contents = repo.get_contents("notice3.ini")
 			repo.update_file(contents.path, "notice3 삭제", '', contents.sha)
