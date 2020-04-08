@@ -995,10 +995,10 @@ while True:
 			command_list += '[보스명]메모 [할말]\n'
 			command_list += ','.join(command[27]) + '\n'     #!파티2
 			command_list += ','.join(command[27]) + ' [파티내용]\n'     #!파티2
-			command_list += ','.join(command[27]) + '삭제\n'     #!파티2
-			command_list += ','.join(command[28]) + '\n'     #!대기자
-			command_list += ','.join(command[28]) + ' [파티내용]\n'     #!대기자
-			command_list += ','.join(command[28]) + '삭제\n'     #!대기자
+			command_list += ','.join(command[28]) + '삭제\n'     #!파티2
+			command_list += ','.join(command[29]) + '\n'     #!대기자
+			command_list += ','.join(command[29]) + ' [파티내용]\n'     #!대기자
+			command_list += ','.join(command[30]) + '삭제\n'     #!대기자
 			embed = discord.Embed(
 					title = "----- 명령어 -----",
 					description= '```' + command_list + '```',
@@ -1282,7 +1282,7 @@ while True:
 			return
 
 	################ 파티2 삭제 ################ 
-	@client.command(name=command[27][0], aliases=command[27][1:])
+	@client.command(name=command[28][0], aliases=command[28][1:])
 	async def notice2Del_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			contents = repo.get_contents("notice2.ini")
@@ -1293,7 +1293,7 @@ while True:
 
 
 	################ 대기자 등록/확인 ################ 
-	@client.command(name=command[28][0], aliases=command[28][1:])
+	@client.command(name=command[29][0], aliases=command[29][1:])
 	async def notice3_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content.split(" ")
@@ -1321,7 +1321,7 @@ while True:
 			return
 
 	################ 대기자 삭제 ################ 
-	@client.command(name=command[28][0], aliases=command[28][1:])
+	@client.command(name=command[30][0], aliases=command[30][1:])
 	async def notice3Del_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			contents = repo.get_contents("notice3.ini")
