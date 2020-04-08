@@ -1261,15 +1261,15 @@ while True:
 			if len(msg) > 1:
 				sayMessage = " ".join(msg[1:])
 				contents = repo.get_contents("notice2.ini")
-				repo.update_file(contents.path, "notice 등록", sayMessage, contents.sha)
+				repo.update_file(contents.path, "notice2 등록", sayMessage, contents.sha)
 				await ctx.send( '< 파티 등록완료 >', tts=False)
 			else:
-				notice_initdata = repo.get_contents("notice2.ini")
-				notice = base64.b64decode(notice_initdata.content)
-				notice = notice.decode('utf-8')
-				if notice != '' :
+				notice2_initdata = repo.get_contents("notice2.ini")
+				notice2 = base64.b64decode(notice2_initdata.content)
+				notice2 = notice2.decode('utf-8')
+				if notice2 != '' :
 					embed = discord.Embed(
-							description= str(notice),
+							description= str(notice2),
 							color=0xff00ff
 							)
 				else :
@@ -1303,12 +1303,12 @@ while True:
 				repo.update_file(contents.path, "notice3 등록", sayMessage, contents.sha)
 				await ctx.send( '< 대기자 등록완료 >', tts=False)
 			else:
-				notice_initdata = repo.get_contents("notice3.ini")
-				notice = base64.b64decode(notice_initdata.content)
-				notice = notice.decode('utf-8')
-				if notice != '' :
+				notice3_initdata = repo.get_contents("notice3.ini")
+				notice3 = base64.b64decode(notice3_initdata.content)
+				notice3 = notice3.decode('utf-8')
+				if notice3 != '' :
 					embed = discord.Embed(
-							description= str(notice),
+							description= str(notice3),
 							color=0xff00ff
 							)
 				else :
