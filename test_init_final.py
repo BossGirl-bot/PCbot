@@ -1731,7 +1731,7 @@ while True:
 					aa.append(fixed_bossData[i][0])                      #output_bossData[0] : 보스명
 					aa.append(fixed_bossTime[i])                         #output_bossData[1] : 시간
 					aa.append(fixed_bossTime[i].strftime('%H:%M:%S'))    #output_bossData[2] : 시간(00:00:00)
-					aa.append('@')                                       #output_bossData[3] : @
+					aa.append(0)                                         #output_bossData[3] : @
 					aa.append(0)                                         #output_bossData[4] : 멍/미입력 보스
 					aa.append(0)                                         #output_bossData[5] : 멍/미입력횟수
 					aa.append("")                                        #output_bossData[6] : 메세지
@@ -2109,138 +2109,6 @@ while True:
 							)
 					await msg.channel.send(embed=embed, tts=False)
 					
-			################ 경주 ################ 
-			
-			if message.content.startswith(command[24]):
-def __init__(self, ctx):
-		self.bot = ctx.bot
-		self._guild = ctx.guild
-		self._channel = ctx.channel
-		self._cog = ctx.cog
-		
-	async def modify_(self, ctx, *, msg: str):
-		race_info = []
-		fr = []
-		racing_field = []
-		str_racing_field = []
-		cur_pos = []
-		race_val = []
-		random_pos = []
-		racing_result = []
-		output = ':camera: :camera: :camera: 신나는 레이싱! :camera: :camera: :camera:\n'
-		#racing_unit = [':giraffe:', ':elephant:', ':tiger2:', ':hippopotamus:', ':crocodile:',':leopard:',':ox:', ':sheep:', ':pig2:',':dromedary_camel:',':dragon:',':rabbit2:'] #동물스킨
-		racing_unit = [':red_car:', ':taxi:', ':bus:', ':trolleybus:', ':race_car:', ':police_car:', ':ambulance:', ':fire_engine:', ':minibus:', ':truck:', ':articulated_lorry:', ':tractor:', ':scooter:', ':manual_wheelchair:', ':motor_scooter:', ':auto_rickshaw:', ':blue_car:', ':bike:', ':helicopter:', ':steam_locomotive:']  #탈것스킨
-		random.shuffle(racing_unit) 
-		racing_member = msg.split(" ")
-
-		if racing_member[0] == "종료" :
-			await ctx.send('경주 종료!')
-			return
-		elif racing_member[0] == "입장" :
-			if len(racing_member) == 2:
-				await ctx.send('레이스 인원이 1명 입니다.')
-				return
-			elif len(racing_member) >= 14:
-				await ctx.send('레이스 인원이 12명 초과입니다.')
-				return
-			else :
-				race_val = random.sample(range(14, 14+len(racing_member)-1), len(racing_member)-1)
-				for i in range(len(racing_member)-1):
-					fr.append(racing_member[i+1])
-					fr.append(racing_unit[i])
-					fr.append(race_val[i])
-					race_info.append(fr)
-					fr = []
-					for i in range(66):
-						fr.append(" ")
-					racing_field.append(fr)
-					fr = []
-
-				for i in range(len(racing_member)-1):
-					racing_field[i][0] = "|"
-					racing_field[i][64] = race_info[i][1]
-					racing_field[i][65] = "| " + race_info[i][0]
-					str_racing_field.append("".join(racing_field[i]))
-					cur_pos.append(64)
-
-				for i in range(len(racing_member)-1):
-					output +=  str_racing_field[i] + '\n'
-					
-				
-				result_race = await ctx.send(output + ':traffic_light: 3초 후 경주가 시작됩니다!')
-				await asyncio.sleep(1)
-				await result_race.edit(content = output + ':traffic_light: 2초 후 경주가 시작됩니다!')
-				await asyncio.sleep(1)
-				await result_race.edit(content = output + ':traffic_light: 1초 후 경주가 시작됩니다!')
-				await asyncio.sleep(1)
-				await result_race.edit(content = output + ':checkered_flag:  경주 시작!')								
-
-				for i in range(len(racing_member)-1):
-					test = random.sample(range(2,64), race_info[i][2])
-					while len(test) != 14 + len(racing_member)-2 :
-						test.append(1)
-					test.append(1)
-					test.sort(reverse=True)
-					random_pos.append(test)
-				
-				for j in range(len(random_pos[0])):
-					if j%2 == 0:
-						output =  ':camera: :camera_with_flash: :camera: 신나는 레이싱! :camera_with_flash: :camera: :camera_with_flash:\n'
-					else :
-						output =  ':camera_with_flash: :camera: :camera_with_flash: 신나는 레이싱! :camera: :camera_with_flash: :camera:\n'
-					str_racing_field = []
-					for i in range(len(racing_member)-1):
-						temp_pos = cur_pos[i]
-						racing_field[i][random_pos[i][j]], racing_field[i][temp_pos] = racing_field[i][temp_pos], racing_field[i][random_pos[i][j]]
-						cur_pos[i] = random_pos[i][j]
-						str_racing_field.append("".join(racing_field[i]))
-
-					await asyncio.sleep(1) 
-
-					for i in range(len(racing_member)-1):
-						output +=  str_racing_field[i] + '\n'
-					
-					await result_race.edit(content = output + ':checkered_flag:  경주 시작!')
-				
-				for i in range(len(racing_field)):
-					fr.append(race_info[i][0])
-					fr.append((race_info[i][2])-13)
-					racing_result.append(fr)
-					fr = []
-
-				result = sorted(racing_result, key=lambda x: x[1])
-
-				result_str = ''
-				for i in range(len(result)):
-					if result[i][1] == 1:
-						result[i][1] = ':first_place:'
-					elif result[i][1] == 2:
-						result[i][1] = ':second_place:'
-					elif result[i][1] == 3:
-						result[i][1] = ':third_place:'
-					elif result[i][1] == 4:
-						result[i][1] = ':four:'
-					elif result[i][1] == 5:
-						result[i][1] = ':five:'
-					elif result[i][1] == 6:
-						result[i][1] = ':six:'
-					elif result[i][1] == 7:
-						result[i][1] = ':seven:'
-					elif result[i][1] == 8:
-						result[i][1] = ':eight:'
-					elif result[i][1] == 9:
-						result[i][1] = ':nine:'
-					elif result[i][1] == 10:
-						result[i][1] = ':keycap_ten:'
-					elif result[i][1] == 11:
-						result[i][1] = ':x:'
-					elif result[i][1] == 12:
-						result[i][1] = ':x:'
-					result_str += result[i][1] + "  " + result[i][0] + "  "
-					
-				#print(result)
-					
-				await result_race.edit(content = output + ':tada: 경주 종료!\n' + result_str)
 
 	client.loop.create_task(task())
 	try:
