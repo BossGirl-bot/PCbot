@@ -432,7 +432,7 @@ def init():
 			outputTimeHour.append(int(regenTime[j][:2]))
 			outputTimeMin.append(int(regenTime[j][2:]))
 		except ValueError:
-			raise Exception(f[boss.ini] 파일 {f} gentime을 확인하시기 바랍니다.")
+			raise Exception(f"[boss.ini] 파일 {f} gentime을 확인하시기 바랍니다.")
 		f = []
 
 	regenembed = discord.Embed(
